@@ -1,0 +1,107 @@
+<div class="signup-page">
+  <div class="wrapper">
+    <div class="header header-filter" style="background-image: url('../assets/img/city.jpg'); background-size: cover; background-position: top center;">
+      <div class="container">
+        <div class="row">
+          <div *ngIf="!isRegistration" class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3">
+            <div class="card card-signup">
+              <form class="form" method="" action="">
+                <div class="header header-primary text-center">
+                  <h4>Sign In</h4>
+                </div>
+                <div class="content">
+                  <label>{{errormessage}}</label>
+                  <div class="input-group">
+                    <span class="input-group-addon">
+                      <i class="material-icons">face</i>
+                    </span>
+                    <input class="form-control" placeholder="User Name..." name="contact-loginusername" [(ngModel)]="username" type="text" required
+                    />
+                  </div>
+                  <div class="input-group">
+                    <span class="input-group-addon">
+                      <i class="material-icons">lock_outline</i>
+                    </span>
+                    <input class="form-control" placeholder="Password..." name="contact-loginpassword" [(ngModel)]="password" type="password"
+                      required />
+                  </div>
+                  <div class="text-center">
+                    <button class="btn btn-info" (click)="onLogin()">SignIn</button>
+                    <button class="btn btn-info" (click)="onSignUp()">SignUp</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div *ngIf="isRegistration" class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3">
+            <div class="card card-signup">
+              <form class="form" method="" action="">
+                <div class="header header-primary text-center">
+                  <h4>Sign Up</h4>
+                </div>
+                <div class="content">
+                <div class="input-group">
+                  <span class="input-group-addon">
+                    <i class="material-icons">face</i>
+                  </span>
+                  <input class="form-control" placeholder="User Name..." name="contact-username" [(ngModel)]="username" type="text" required
+                  />
+                </div>
+                <div class="input-group">
+                  <span class="input-group-addon">
+                    <i class="material-icons">lock_outline</i>
+                  </span>
+                  <input class="form-control" placeholder="Password..." name="contact-password" [(ngModel)]="password" type="password" required
+                  />
+                </div>
+
+                <div class="input-group">
+                  <span class="input-group-addon">
+                    <i class="material-icons">face</i>
+                  </span>
+                  <input class="form-control" placeholder="Name..." name="contact-name" [(ngModel)]="name" type="text" required />
+                </div>
+
+                <div class="input-group">
+                  <span class="input-group-addon">
+                    <i class="material-icons">face</i>
+                  </span>
+                  <input class="form-control" placeholder="Father Name..." name="contact-fatherName" [(ngModel)]="fatherName" type="text" required
+                  />
+                </div>
+
+                <div class="input-group">
+                  <span class="input-group-addon">
+                    <i class="material-icons">face</i>
+                  </span>
+                  <input class="form-control" placeholder="Mother Name..." name="contact-motherName" [(ngModel)]="motherName" type="text" required
+                  />
+                </div>
+
+                <div class="input-group">
+                  <span class="input-group-addon">
+                    <i class="material-icons">face</i>
+                  </span>
+                  <input class="form-control" placeholder="Aadhar Number..." name="contact-aadhar" [(ngModel)]="aadhar" type="text" required/>
+                </div>
+
+                <div class="input-group">
+                  <span class="input-group-addon">
+                    <i class="material-icons">face</i>
+                  </span>
+                  <input class="form-control" placeholder="Enter Mobile Number..." name="contact-mobileNumber" [(ngModel)]="mobileNumber" type="text"
+                    required/>
+                </div>
+                <div class="text-center">
+                  <button class="btn btn-info" (click)="onRegister()">Register</button>
+                  <button class="btn btn-info" (click)="onCancel()">Cancel</button>
+                </div>
+              </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
